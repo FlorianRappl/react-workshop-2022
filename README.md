@@ -146,14 +146,14 @@ The exercises can be found in the *exercises* subfolder. Each exercise has been 
 * HTML code for the component could look like
 
 ```html
-&lt;div&gt;
-  &lt;div&gt;
-    &lt;strong&gt;Hello!&lt;/strong&gt; Welcome, &lt;span style=&quot;font-family: Consolas; text-decoration: underline&quot;&gt;&lt;span style=&quot;color: green&quot;&gt;Florian&lt;/span&gt; &lt;span style=&quot;color: red&quot;&gt;Rappl&lt;/span&gt;&lt;/span&gt;.
-  &lt;/div&gt;
-  &lt;div&gt;
-    Not your name? Click &lt;a href=&quot;#&quot;&gt;here&lt;/a&gt; to correct ...
-  &lt;/div&gt;
-&lt;/div&gt;
+<div>
+  <div>
+    <strong>Hello!</strong> Welcome, <span style="font-family: Consolas; text-decoration: underline"><span style="color: green">Florian</span> <span style="color: red">Rappl</span></span>.
+  </div>
+  <div>
+    Not your name? Click <a href="#">here</a> to correct ...
+  </div>
+</div>
 ```
 
 ### 02 - Components (1)
