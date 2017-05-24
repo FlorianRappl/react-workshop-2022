@@ -6,10 +6,19 @@ import HomeComponent from './home';
 
 const history = createBrowserHistory();
 
+// Here we use a simple div as the layout container
+// in reality we would always opt for a dedicated
+// component.
+// Switch will only take the first hit instead of all
+// components that apply to the given route.
 const app = (
   <Router history={history}>
-    <Redirect from="/" to="/home" />
-    <Route path="/home" component={HomeComponent} />
+    <div>
+      <Switch>
+        <Route path="/home" component={HomeComponent} />
+        <Redirect from="/" to="/home" exact />
+      </Switch>
+    </div>
   </Router>
 );
 
