@@ -133,6 +133,14 @@ Concludes the testing part with more useful techniques.
 
 Finally, this example outlines how a React Native component / code would look like.
 
+### 20 - Use State Hook
+
+Shows how the `useState` hook can be used to give SFCs a local state.
+
+### 21 - Use Effect Hook
+
+Shows how the `useEffect` hook can be used to give SFCs the ability to integrate side-effects with dependencies.
+
 ## Exercises
 
 The exercises can be found in the *exercises* subfolder. Each exercise has been placed in its own directory. Here we also find a potential solution, which just implements the bare minimum to fulfill the assigned task.
