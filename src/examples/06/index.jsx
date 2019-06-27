@@ -3,13 +3,11 @@ import { render } from 'react-dom';
 
 const MyForm = () => {
   const [name, setName] = React.useState('');
-  return <input value={name} onChange={e => setName(e.target.value)} />;
+  return (
+    <input value={name} onChange={e => setName(e.target.value)} />
+  );
 };
 
-const App = () => (
-  <>
-    <MyForm />
-  </>
-);
+const App = () => <MyForm />;
 
 render(<App />, document.querySelector('#app'));

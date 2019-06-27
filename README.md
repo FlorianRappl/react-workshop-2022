@@ -50,39 +50,75 @@ The examples can be found in the *src/examples* subfolder. Each exercise has bee
 
 ### 01 - Create Element
 
+Demonstrates that `createElement` and JSX are equivalent.
+
 ### 02 - JSX
+
+Uses some more complicated JSX and illustrates the little pitfalls that may be there.
 
 ### 03 - Client-Side Rendering
 
+Changes the DOM from our React code for the first time.
+
 ### 04 - Functional Components
+
+Introduces React components which are just simple functions.
 
 ### 05 - useState Hook
 
+Brings some local state into play by using the `useState` hook.
+
 ### 06 - Input Components
+
+Introduces the concept of input components (either managed or controlled).
 
 ### 07 - useEffect Hook
 
+Side-effects can be controlled via the `useEffect` hook.
+
 ### 08 - useRef Hook
+
+This particular hook can be helpful to obtain a reference to a connected DOM element.
 
 ### 09 - Custom Hooks
 
+How can we write custom hooks? These are just simple functions with high reusability.
+
 ### 10 - Routing and Links
+
+Routing and staying inside the routed world is an important factor in any SPA.
 
 ### 11 - BrowserRouter and Fallbacks
 
+The `BrowserRouter` gives us a HTML5 history compatible router that works great for most SPAs.
+
 ### 12 - Lazy Loading
+
+Lazy loading can be integrated in very little steps. Improve your apps performance now!
 
 ### 13 - React Context Provider
 
+The React Context API gives us the possibility of easily creating a pull principal for obtaining information.
+
 ### 14 - useContext Hook
+
+Using a context from a functional component can be done via `useContext`.
 
 ### 15 - Global Container
 
+A global state container without a library is written very fast.
+
 ### 16 - Testing Events
+
+Basic testing can be done easily using the integrated utilities in `react-dom`.
 
 ### 17 - DOM Assertions
 
+Checking the rendered tree is also part of the shipped testing utilities.
+
 ### 18 - Server-Side Rendering
+
+Server-side rendering is as simple as calling a single function.
 
 ### 19 - React Native
 
@@ -91,6 +127,8 @@ Snippet to show how React Native then can look like.
 ## Exercises
 
 The exercises can be found in the *src/exercises* subfolder. Each exercise has been placed in its own directory. Here we also find a potential solution, which just implements the bare minimum to fulfill the assigned task.
+
+**:rocket: All solutions are available in the `all-solutions` branch.**
 
 ### 01 - Render some JSX
 
