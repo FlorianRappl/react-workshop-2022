@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { render } from 'react-dom';
 
 const TodoItem = ({ done, text, onChange }) => {
   return (
@@ -51,4 +50,6 @@ const TodoList = () => {
   );
 };
 
-render(<TodoList />, document.querySelector('#app'));
+export default () => (
+  <TodoList />
+);

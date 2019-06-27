@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { render } from 'react-dom';
 
 const spanStyle = {
   fontFamily: 'Consolas',
@@ -27,16 +26,16 @@ const Hello = ({ firstName, lastName, showCorrect }) => {
     <div className="my-class" onClick={() => setCount(count + 1)}>
       <div>
         <strong>Hello!</strong> Welcome,{' '}
-        <span style={spanStyle}>
+        <span style={spanStyle} className="full-name">
           <span style={green}>{firstName}</span> <span style={red}>{lastName}</span>
         </span>
         {showCorrect && <Correct />}
-        <div>Currently {count} click{s}.</div>
+        <div>
+          Currently <span className="counter">{count}</span> click{s}.
+        </div>
       </div>
     </div>
   );
 };
 
-const element = <Hello firstName="Florian" lastName="Rappl" showCorrect={true} />;
-
-render(element, document.querySelector('#app'));
+export default Hello;

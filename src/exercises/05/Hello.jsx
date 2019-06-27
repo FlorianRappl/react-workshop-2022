@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { render } from 'react-dom';
+import { GlobalContext } from './context';
 
 const spanStyle = {
   fontFamily: 'Consolas',
@@ -21,22 +21,22 @@ const Correct = () => (
 );
 
 const Hello = ({ firstName, lastName, showCorrect }) => {
-  const [count, setCount] = React.useState(0);
+  const { count, increment } = React.useContext(GlobalContext);
   const s = count !== 1 ? 's' : '';
   return (
-    <div className="my-class" onClick={() => setCount(count + 1)}>
+    <div className="my-class" onClick={increment}>
       <div>
         <strong>Hello!</strong> Welcome,{' '}
         <span style={spanStyle}>
           <span style={green}>{firstName}</span> <span style={red}>{lastName}</span>
         </span>
         {showCorrect && <Correct />}
-        <div>Currently {count} click{s}.</div>
+        <div>
+          Currently {count} click{s}.
+        </div>
       </div>
     </div>
   );
 };
 
-const element = <Hello firstName="Florian" lastName="Rappl" showCorrect={true} />;
-
-render(element, document.querySelector('#app'));
+export default () => <Hello firstName="Florian" lastName="Rappl" showCorrect={true} />;
