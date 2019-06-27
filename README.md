@@ -8,13 +8,9 @@ In order to fully enjoy this repository the following things are needed:
 
 * *Any* evergreen browser (e.g., Chrome, Opera, Firefox, ...)
 * Some (advanced) text editor (e.g., VS Code, Sublime Text, Atom, ...)
-* Git v2+
-* Node.js v6+
-* Webpack v2+ [via npm]
-* http-server [via npm]
-* optional: TypeScript v2+ [via npm]
-
-We use TypeScript in this repository to indicate the type of objects floating around. No knowledge in TypeScript is required.
+* Git
+* Node.js
+* Rest will be installed locally via `npm i`
 
 The following URLs are helpful to get some software:
 
@@ -22,14 +18,6 @@ The following URLs are helpful to get some software:
 * [Git](https://git-scm.com/downloads)
 * [Node.js](https://nodejs.org/en/download/)
 * [Opera](https://www.opera.com/computer)
-
-Furthermore, once Node.js is set up the rest can be installed as follows:
-
-```bash
-npm i webpack typescript http-server -g
-```
-
-Administrative rights (e.g., via `sudo`) may be required.
 
 ## Installation
 
@@ -49,108 +37,67 @@ npm install
 Finally, you can start an example or exercise with the following code:
 
 ```bash
-cd examples/01
-webpack
+# runs the first exercise
+npm run exercise-01
+
+# runs the first example
+npm run example-01
 ```
 
 ## Examples
 
-The example codes can be found in the *examples* subfolder. Each example has been placed in its own directory. Below is a short description of each example.
+The examples can be found in the *src/examples* subfolder. Each exercise has been placed in its own directory. Here we also find a potential solution, which just implements the bare minimum to fulfill the assigned task.
 
-### 01 - createElement
-
-Compares basic element creation with the React API to extended tooling using JSX.
+### 01 - Create Element
 
 ### 02 - JSX
 
-Outlines more advanced JSX concepts.
+### 03 - Client-Side Rendering
 
-### 03 - Components
+### 04 - Functional Components
 
-Shows how components (custom elements) are being created.
+### 05 - useState Hook
 
-### 04 - Lifecycle
+### 06 - Input Components
 
-Discusses the essential lifecycle of components.
+### 07 - useEffect Hook
 
-### 05 - One-Way Binding
+### 08 - useRef Hook
 
-Brings state into play. We use the state to store internal properties of our component instance.
+### 09 - Custom Hooks
 
-### 06 - Two-Way Binding
+### 10 - Routing and Links
 
-Shows how to create two-way binding, e.g., with an input element.
+### 11 - BrowserRouter and Fallbacks
 
-### 07 - Update Hooks
+### 12 - Lazy Loading
 
-Illustrates how we can intercept certain parts of the React update / render pipeline.
+### 13 - React Context Provider
 
-### 08 - References
+### 14 - useContext Hook
 
-Goes into details on the ref prop and other special props.
+### 15 - Global Container
 
-### 09 - DOM Renderer
+### 16 - Testing Events
 
-Reveals how elements are finally placed in the DOM.
+### 17 - DOM Assertions
 
-### 10 - Other Renderers
-
-Discusses the other potential renderers, which may be useful under special conditions.
-
-### 11 - History Library
-
-Outlines details of the popular history package.
-
-### 12 - Basic Router
-
-Goes beyond the pure history library by introducing the React Router component.
-
-### 13 - Router Abstraction
-
-Concludes the React Router v4 API presentation.
-
-### 14 - Redux Reducer
-
-Starts an introduction of Redux.
-
-### 15 - Combined Reducers
-
-Goes into more advanced techniques of Redux.
-
-### 16 - Container Component
-
-Illustrates how a container component may look like.
-
-### 17 - React Test Utils
-
-Introduces tests for React components by starting with the essential API and tooling.
-
-### 18 - Testing React
-
-Concludes the testing part with more useful techniques.
+### 18 - Server-Side Rendering
 
 ### 19 - React Native
 
-Finally, this example outlines how a React Native component / code would look like.
-
-### 20 - Use State Hook
-
-Shows how the `useState` hook can be used to give SFCs a local state.
-
-### 21 - Use Effect Hook
-
-Shows how the `useEffect` hook can be used to give SFCs the ability to integrate side-effects with dependencies.
+Snippet to show how React Native then can look like.
 
 ## Exercises
 
-The exercises can be found in the *exercises* subfolder. Each exercise has been placed in its own directory. Here we also find a potential solution, which just implements the bare minimum to fulfill the assigned task.
+The exercises can be found in the *src/exercises* subfolder. Each exercise has been placed in its own directory. Here we also find a potential solution, which just implements the bare minimum to fulfill the assigned task.
 
-### 01 - JSX
+### 01 - Render some JSX
 
-* Write an element in JSX that can be used to show
-  - a given first name,
-  - a given last name, and
-  - an optional (predetermined) description below.
+* Write an element in JSX that is used to show
+  * a given first name,
+  * a given last name, and
+  * an optional (predetermined) description below.
 * HTML code for the component could look like
 
 ```html
@@ -164,11 +111,21 @@ The exercises can be found in the *exercises* subfolder. Each exercise has been 
 </div>
 ```
 
+* Render it on an empty page
+
+**Hint**: You can use the blank file in `src/exercises/01/index.html` linked to `src/exercises/01/app.js` as a starting point.
+
 ### 02 - Components (1)
 
-* Extend the previous element to a component
+* Extend the previous element to a (reusable) component
 * Bring in a state showing how often the component was clicked
 * Integrate the click counter via a `onClick` property on the outer `div`
+
+The component should be called like:
+
+```jsx
+<Hello firstName="Florian" lastName="Rappl" showCorrect={true} />
+```
 
 ### 03 - Components (2)
 
@@ -183,26 +140,18 @@ The exercises can be found in the *exercises* subfolder. Each exercise has been 
 * One layout with a home component (can be blank)
 * Three links: Home, Hello, and TodoList
 * The route for the hello component should expose the parameters
-* Insert a not found page for invalid URLs
+* Insert a not found page for invalid (i.e., unknown) URLs
 
-### 05 - Redux (1)
+Hint: You need to import the *react-router* and *react-router-dom* packages for this exercise.
 
-* Change the previous ToDo list to use Redux
-* Support three actions:
-  1. `addItem(text: string)`
-  2. `toggle(id: number)`
-  3. `editItem(id: number, text: string)`
-* Make the reducer scalable by extracting the handlers
-* How can we decouple handlers from the reducer?
+### 05 - Global State
 
-### 06 - Redux (2)
+* Introduce a global state in our application
+* The state should store the number of clicks (`clickCount`) obtained earlier
+* Goal of the global state is to prevent losing the previously set local state (clicks) when navigating between pages
+* For this one action (`incrementCount`) needs to be added
 
-* Integrate the ToDo list into the routing app
-* Introduce a different sub-state for each top component
-* Mediate the changes via a container component
-* During each state change output the full app state in the console
-
-### 07 - Testing
+### 06 - Testing
 
 * Test the hello component of our application
 * Assert that clicking the component increases the count
