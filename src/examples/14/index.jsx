@@ -10,7 +10,7 @@ const MyComponent = () => {
 
 const App = () => (
   <>
-    <MyContext.Provider value="DWX2019">
+    <MyContext.Provider value="DWX2022">
       <MyComponent />
     </MyContext.Provider>
   </>
