@@ -2,6 +2,8 @@
 
 This workshop was designed to train established web developers in React. Prerequisite for the workshop is knowledge in ES6 or alternatively TypeScript.
 
+**:zap: For the slides go to [talks.florian-rappl.de/dwx2022](https://talks.florian-rappl.de/dwx2022).**
+
 ## Prerequisites
 
 In order to fully enjoy this repository the following things are needed:
