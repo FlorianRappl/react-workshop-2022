@@ -1,13 +1,15 @@
 # React Workshop
 
-This workshop was designed to train established web developers in React. Prerequisite for the workshop is knowledge in ES6 or TypeScript.
+This workshop was designed to train established web developers in React. Prerequisite for the workshop is knowledge in ES6 or alternatively TypeScript.
+
+**:zap: For the slides go to [talks.florian-rappl.de/dwx2022](https://talks.florian-rappl.de/dwx2022).**
 
 ## Prerequisites
 
 In order to fully enjoy this repository the following things are needed:
 
-* *Any* evergreen browser (e.g., Chrome, Opera, Firefox, ...)
-* Some (advanced) text editor (e.g., VS Code, Sublime Text, Atom, ...)
+* *Any* evergreen browser (e.g., Chrome, Edge, Firefox, ...)
+* Some (advanced) text editor (e.g., VS Code, Sublime Text, ...)
 * Git
 * Node.js
 * Rest will be installed locally via `npm i`
@@ -17,20 +19,19 @@ The following URLs are helpful to get some software:
 * [VS Code](https://code.visualstudio.com/#alt-downloads)
 * [Git](https://git-scm.com/downloads)
 * [Node.js](https://nodejs.org/en/download/)
-* [Opera](https://www.opera.com/computer)
 
 ## Installation
 
 First obtain the repository:
 
 ```bash
-git clone https://github.com/FlorianRappl/react-workshop
+git clone https://github.com/FlorianRappl/react-workshop-2022
 ```
 
 Then make sure you installed the dependencies:
 
 ```bash
-cd react-workshop
+cd react-workshop-2022
 npm install
 ```
 

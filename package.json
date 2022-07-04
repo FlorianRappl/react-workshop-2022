@@ -33,19 +33,19 @@
   "author": "Florian Rappl",
   "license": "MIT",
   "dependencies": {
-    "history": "^4.6.1",
+    "history": "^4.10.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1"
   },
   "devDependencies": {
-    "@types/history": "^4.5.1",
+    "@types/history": "^4.7.3",
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
     "@types/react-router": "^5.0.2",
-    "@types/react-router-dom": "^4.0.4",
-    "parcel-bundler": "^1.12.3",
+    "@types/react-router-dom": "^4.3.5",
+    "parcel-bundler": "^1.12.4",
     "typescript": "^3.5.2"
   }
 }
